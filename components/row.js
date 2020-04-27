@@ -3,7 +3,7 @@ function chooseStyle(number) {
 }
 
 export default ({ row }) => (
-	<div>{row.map(square => {
+	<div className="boxContainer">{row.map(square => {
 			return(
 				<p className={chooseStyle(square)}>{square}</p>
 			)
@@ -11,6 +11,11 @@ export default ({ row }) => (
 		<style jsx> {`
 			.black {
 				background-color: black;
+			}
+			.boxContainer {
+				width: 100%;
+				display: flex;
+				justify-content: center;
 			}
 			.white {
 				background-color: white;

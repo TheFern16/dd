@@ -21,7 +21,7 @@ export default function Board ({size}) {
 			<div>
 				{matrix.map(row => {
 					return (
-						<div>
+						<div className="rowContainer">
 							<Row row={row} />
 						</div>
 					)
@@ -30,6 +30,11 @@ export default function Board ({size}) {
 			<style jsx> {`
 				h1 {
 					color: black;
+				}
+				.rowContainer {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
 				}
 			`}</style>
 		</div>
