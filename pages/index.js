@@ -1,19 +1,14 @@
+import { useState } from 'react';
 import P from '../components/paragraph'
 import Post from '../components/post'
 import Board from '../components/board';
 
 export default function Index() {
-  const boardSize = 8;
+  var [boardSize, setBoardSize] = useState(8);
 
   function handleChange(event) {
-    if (typeof event.target.value) {
-      //
-      console.log(boardSize)
-      let temp = event.target.value;
-      boardSize = temp;
-    }
+    return setBoardSize(JSON.parse(event.target.value));
   };
-
   return (
     <div className="main">
       <Post title="Game Board">

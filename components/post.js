@@ -2,6 +2,7 @@ export default ({ title, children }) => (
   <div className="main">
     <h1>{title}</h1>
     {children}
+    
     <style jsx>{`
       .main {
         font: 15px Helvetica, Arial;
@@ -14,6 +15,7 @@ export default ({ title, children }) => (
         font-weight: bold;
         margin: 10px 0;
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )

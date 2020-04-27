@@ -18,16 +18,15 @@ function createMatrix(size, count = 0) {
 	return result;
 }
 
-
 export default function Board ({size}) {
 	const matrix = [...createMatrix(size)];
 	return (
 		<div>
 			<div>
-				{matrix.map(row => {
+				{matrix.map((row, key) => {
 					return (
 						<div className="rowContainer">
-							<Row row={row} />
+							<Row row={row} key={key} i={key} />
 						</div>
 					)
 				})}
@@ -41,7 +40,8 @@ export default function Board ({size}) {
 					flex-direction: column;
 					align-items: center;
 				}
-			`}</style>
+			`}
+			</style>
 		</div>
 	)
-}
+};

@@ -20,6 +20,7 @@ export default ({ row }) => (
 			.white {
 				background-color: white;
 			}
-		`}</style>
+		`}
+		</style>
 	</div>
 )
