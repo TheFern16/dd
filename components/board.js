@@ -24,19 +24,20 @@ export default function Board ({ size, setCurrentBoardPiece, pieceType, pieceCol
 	return (
 		<div>
 			<div>
-				{matrix.map((row, key) => {
-					return (
-						<div className="rowContainer">
-							<Row 
-								row={row}  
-								i={key} 
-								arrayLength={matrix.length} 
-								setCurrentBoardPiece={setCurrentBoardPiece}
-								pieceType={pieceType}
-								pieceColor={pieceColor}
-							/>
-						</div>
-					)
+				{
+					matrix.map((row, key) => {
+						return (
+							<div className="rowContainer">
+								<Row 
+									row={row}  
+									i={key} 
+									arrayLength={matrix.length} 
+									setCurrentBoardPiece={setCurrentBoardPiece}
+									pieceType={pieceType}
+									pieceColor={pieceColor}
+								/>
+							</div>
+						)
 				})}
 			</div>
 			<style jsx> {`

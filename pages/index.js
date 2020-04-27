@@ -14,17 +14,9 @@ export default function Index() {
 
   function handleRadioChange(event) {
     if (event.target.name === 'type') {
-      if (event.target.value === 'default') {
-        return setPieceType('default');
-      } else if (event.target.value === 'next') {
-        return setPieceType('next');
-      }
+      return event.target.value === 'default' ? setPieceType('default') : setPieceType('next');
     } else {
-      if (event.target.value === 'default') {
-        return setPieceColor('default');
-      } else if (event.target.value === 'next') {
-        return setPieceColor('next');
-      }
+      return event.target.value === 'default' ? setPieceColor('default') : setPieceColor('next');
     }
   };
 
