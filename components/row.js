@@ -1,23 +1,13 @@
-
-
 export default function Row ({ 
 		row, i, arrayLength, 
 		setCurrentBoardPiece, pieceType, pieceColor }) {
 		
 	function chooseStyle(number, key, arrLength, pieceColor) {
 		if (key < ((arrLength / 2) / 2) && number === 1) {
-			if (pieceColor === 'default') {
-				return 'box black red'
-			} else {
-				return 'box black yellow';
-			}
+			return pieceColor === 'default' ? 'box black red' : 'box black yellow';
 		}
 		if (key >= arrLength - 2 && number === 0) {
-			if (pieceColor === 'default') {
-				return 'box white blackPiece';
-			} else {
-				return 'box white purple';
-			}
+			return pieceColor === 'default' ? 'box white blackPiece' : 'box white purple';
 		}
 		if (number === 1) return 'box black';
 		if (number === 0) return 'box white';
@@ -25,18 +15,10 @@ export default function Row ({
 
 	function formatSquare(number, key, arrLength, pieceType) {
 		if (key >= arrLength - 2 && number === 0) {
-			if (pieceType === 'default') {
-				return '0';	
-			} else {
-				return '@';
-			}
+			return pieceType === 'default' ? '0' : '@';
 		}
 		if (number === 1) {
-			if (pieceType === 'default') {
-				return '0';
-			} else {
-				return '@';
-			}
+			return pieceType === 'default' ? '0' : '@';
 		} 
 	};
 
