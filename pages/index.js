@@ -13,7 +13,6 @@ export default function Index() {
   };
 
   function handleRadioChange(event) {
-    console.log(event.target.name);
     if (event.target.name === 'type') {
       if (event.target.value === 'default') {
         return setPieceType('default');

@@ -8,11 +8,15 @@ export default function Row ({
 		if (key < ((arrLength / 2) / 2) && number === 1) {
 			if (pieceColor === 'default') {
 				return 'box black red'
+			} else {
+				return 'box black yellow';
 			}
 		}
-		if (key <= 1 && number === 0) {
+		if (key >= arrLength - 2 && number === 0) {
 			if (pieceColor === 'default') {
 				return 'box white blackPiece';
+			} else {
+				return 'box white purple';
 			}
 		}
 		if (number === 1) return 'box black';
@@ -75,6 +79,12 @@ export default function Row ({
 				}
 				.blackPiece {
 					color: black;
+				}
+				.purple {
+					color: #6a0dad;
+				}
+				.yellow {
+					color: yellow;
 				}
 			`}
 			</style>
