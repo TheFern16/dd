@@ -17,11 +17,15 @@ export default function Row ({ row, i, arrayLength, setCurrentBoardPiece, pieceT
 		if (key >= arrLength - 2 && number === 0) {
 			if (pieceType === 'default') {
 				return '0';	
+			} else {
+				return '@';
 			}
 		}
 		if (number === 1) {
 			if (pieceType === 'default') {
 				return '0';
+			} else {
+				return '@';
 			}
 		} 
 	};
