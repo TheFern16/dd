@@ -16,7 +16,7 @@ function createMatrix(size, count = 0) {
 		result.push(temp);
 	}
 	return result;
-}
+};
 
 export default function Board ({ size, setCurrentBoardPiece, pieceType, pieceColor }) {
 	const matrix = [...createMatrix(size)];

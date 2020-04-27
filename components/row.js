@@ -72,4 +72,4 @@ export default function Row ({
 			</style>
 		</div>
 	);
-}
+};
