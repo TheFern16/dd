@@ -26,7 +26,9 @@ export default ({ row, i, arrayLength }) => (
 		})}
 		<style jsx> {`
 			.box {
-				width: 2em;
+				width: 3em;
+				height: 3em;
+				border: 1em;
 			}
 			.black {
 				background-color: black;
