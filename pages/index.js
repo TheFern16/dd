@@ -26,13 +26,15 @@ export default function Index() {
         <P>Default is 8x8</P>
       </Post>
       <input onChange={handleChange}/>
-      <div onClick={handleRadioChange}>
-        <h4>Piece Type</h4>
-        <label>Default</label>
-        <input value="default" type="radio" />
-        <label>Next Gen</label>
-        <input value="next" type="radio" />
-      </div>
+      <form onClick={handleRadioChange}> 
+        <div >
+          <h4>Piece Type</h4>
+          <label>Default</label>
+          <input value="default" type="radio" />
+          <label>Next Gen</label>
+          <input value="next" type="radio" />
+        </div>
+      </form>
       <Board 
         size={boardSize} 
         pieceType={pieceType}
