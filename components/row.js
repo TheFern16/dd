@@ -1,29 +1,33 @@
 function chooseStyle(number, key, arrLength) {
-	// console.log(key);
-	// var result = '';
-	// if (key < ((arrLength / 2 ) / 2)) result += 'red ';
-	// if (number === 1) result += 'black';
-	// else result += 'white';
-	// console.log(result);
-	// return result;
 	if (key < ((arrLength / 2) / 2) && number === 1) {
-		return 'black red'
+		return 'box black red'
 	}
 	if (key >= arrLength - 2 && number === 1) {
-		return 'black red';
+		return 'box black red';
 	}
-	if (number === 1) return 'black';
-	if (number === 0) return 'white';
+	if (number === 1) return 'box black';
+	if (number === 0) return 'box white';
 };
+
+function formatSquare(number) {
+	if (number === 1) {
+		return number
+	} else {
+		return '';
+	}
+}
 
 
 export default ({ row, i, arrayLength }) => (
 	<div className="boxContainer">{row.map(square => {
 			return(
-				<p className={chooseStyle(square, i, arrayLength)}>{square}</p>
+				<p className={chooseStyle(square, i, arrayLength)}>{formatSquare(square)}</p>
 			)
 		})}
 		<style jsx> {`
+			.box {
+				width: 2em;
+			}
 			.black {
 				background-color: black;
 			}

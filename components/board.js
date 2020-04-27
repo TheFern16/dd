@@ -27,7 +27,11 @@ export default function Board ({size}) {
 				{matrix.map((row, key) => {
 					return (
 						<div className="rowContainer">
-							<Row row={row} key={key} i={key} arrayLength={matrix.length} />
+							<Row 
+								row={row}  
+								i={key} 
+								arrayLength={matrix.length} 
+							/>
 						</div>
 					)
 				})}
