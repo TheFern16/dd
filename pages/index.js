@@ -13,10 +13,19 @@ export default function Index() {
   };
 
   function handleRadioChange(event) {
-    if (event.target.value === 'default') {
-      return setPieceType('default');
-    } else if (event.target.value === 'next') {
-      return setPieceType('next');
+    console.log(event.target.name);
+    if (event.target.name === 'type') {
+      if (event.target.value === 'default') {
+        return setPieceType('default');
+      } else if (event.target.value === 'next') {
+        return setPieceType('next');
+      }
+    } else {
+      if (event.target.value === 'default') {
+        return setPieceColor('default');
+      } else if (event.target.value === 'next') {
+        return setPieceColor('next');
+      }
     }
   };
 
@@ -31,10 +40,15 @@ export default function Index() {
         <div >
           <h4>Piece Type</h4>
           <label>Default</label>
-          <input value="default" type="radio" />
+          <input value="default" type="radio" name="type" />
           <label>Next Gen</label>
-          <input value="next" type="radio" />
-        </div>
+          <input value="next" type="radio" name="type" />
+          <h4>Piece Color</h4>
+          <label>Default</label>
+          <input value="default" type="radio" name="color" />
+          <label>Next Gen</label>
+          <input value="next" type="radio" name="color" />
+        </div>  
       </form>
       <Board 
         size={boardSize} 

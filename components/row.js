@@ -1,8 +1,10 @@
 
 
-export default function Row ({ row, i, arrayLength, setCurrentBoardPiece, pieceType, pieceColor }) {
+export default function Row ({ 
+		row, i, arrayLength, 
+		setCurrentBoardPiece, pieceType, pieceColor }) {
 		
-	function chooseStyle(number, key, arrLength) {
+	function chooseStyle(number, key, arrLength, pieceColor) {
 		if (key < ((arrLength / 2) / 2) && number === 1) {
 			if (pieceColor === 'default') {
 				return 'box black red'
@@ -40,7 +42,7 @@ export default function Row ({ row, i, arrayLength, setCurrentBoardPiece, pieceT
 				row.map(square => {
 					return(
 						<p 
-							className={chooseStyle(square, i, arrayLength)}>
+							className={chooseStyle(square, i, arrayLength, pieceColor)}>
 								{formatSquare(square, i, arrayLength, pieceType)}
 						</p>
 					)
