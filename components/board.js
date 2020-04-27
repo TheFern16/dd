@@ -10,18 +10,23 @@ function createMatrix(size, count = 0) {
 		}
 		result.push(temp);
 	}
-	return (
-		<h1>{result}</h1>
-	)
+	return result;
 }
 
 
 export default function Board ({size}) {
-	const matrix = createMatrix(size);
-	console.log(matrix);
+	const matrix = [...createMatrix(size)];
 	return (
 		<div>
-			<Row matrix={matrix} />
+			<ul>
+				{matrix.map(row => {
+					return (
+						<li>
+							<Row row={row} />
+						</li>
+					)
+				})}
+			</ul>
 			<style jsx> {`
 				h1 {
 					color: black;

@@ -1,6 +1,6 @@
-export default ({ matrix }) => (
+export default ({ row }) => (
 	<div>
-		<p>{matrix}</p>
+		<p>{row}</p>
 		<style jsx> {`
 			p {
 				color: black;
