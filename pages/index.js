@@ -3,6 +3,7 @@ import Post from '../components/post'
 import Board from '../components/board';
 
 export default function Index() {
+  const boardSize = 7;
 
   return (
     <div className="main">
@@ -11,7 +12,7 @@ export default function Index() {
         <P>Default is 8x8</P>
       </Post>
       <input />
-      <Board size="8"/>
+      <Board size={boardSize} />
     </div>
   )
 }
