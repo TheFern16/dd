@@ -26,6 +26,11 @@ export default ({ row, i, arrayLength }) => (
 			)
 		})}
 		<style jsx> {`
+			p {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 			.box {
 				width: 3em;
 				height: 3em;
