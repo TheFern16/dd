@@ -5,7 +5,7 @@ import Board from '../components/board';
 
 export default function Index() {
   var [boardSize, setBoardSize] = useState(8);
-  var [currentSelectedPiece] = useState();
+  var [currentBoardPiece, setCurrentBoardPiece] = useState();
 
   function handleChange(event) {
     return setBoardSize(JSON.parse(event.target.value));
@@ -18,7 +18,11 @@ export default function Index() {
         <P>Default is 8x8</P>
       </Post>
       <input onChange={handleChange}/>
-      <Board size={boardSize} />
+      <Board 
+        size={boardSize} 
+        currentBoardPiece={currentBoardPiece}
+        setCurrentBoardPiece={setCurrentBoardPiece}
+      />
     </div>
   )
 }
