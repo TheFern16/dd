@@ -9,6 +9,7 @@ export default function Index() {
   function handleChange(event) {
     return setBoardSize(JSON.parse(event.target.value));
   };
+  
   return (
     <div className="main">
       <Post title="Game Board">

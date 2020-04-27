@@ -20,13 +20,14 @@ function createMatrix(size, count = 0) {
 
 export default function Board ({size}) {
 	const matrix = [...createMatrix(size)];
+
 	return (
 		<div>
 			<div>
 				{matrix.map((row, key) => {
 					return (
 						<div className="rowContainer">
-							<Row row={row} key={key} i={key} />
+							<Row row={row} key={key} i={key} arrayLength={matrix.length} />
 						</div>
 					)
 				})}
