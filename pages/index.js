@@ -1,11 +1,15 @@
 import P from '../components/paragraph'
 import Post from '../components/post'
+import Board from '../components/board';
 
 export default () => (
   <div className="main">
-    <Post title="My first blog post">
-      <P>Hello there</P>
-      <P>This is an example of a componentized blog post</P>
+    <Post title="Game Board">
+      <P>Select your board size</P>
+      <P>Default is 8x8</P>
     </Post>
+    <input />
+    <Board size="8"/>
   </div>
 )
+
