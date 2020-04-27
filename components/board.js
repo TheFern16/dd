@@ -5,8 +5,13 @@ function createMatrix(size, count = 0) {
 	for (var i = 0; i < size; i ++) {
 		let temp = [];
 		for (var j = 0; j < size; j++) {
-			if (j % 2 !== 0) temp.push(0)
-			if (j % 2 === 0) temp.push(1)
+			if (i % 2 === 0) {
+				if (j % 2 !== 0) temp.push(0)
+				if (j % 2 === 0) temp.push(1)
+			} else {
+				if (j % 2 === 0) temp.push(0)
+				if (j % 2 !== 0) temp.push(1)
+			}
 		}
 		result.push(temp);
 	}
