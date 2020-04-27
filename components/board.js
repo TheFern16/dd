@@ -18,15 +18,15 @@ export default function Board ({size}) {
 	const matrix = [...createMatrix(size)];
 	return (
 		<div>
-			<ul>
+			<div>
 				{matrix.map(row => {
 					return (
-						<li>
+						<div>
 							<Row row={row} />
-						</li>
+						</div>
 					)
 				})}
-			</ul>
+			</div>
 			<style jsx> {`
 				h1 {
 					color: black;
