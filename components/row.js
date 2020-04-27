@@ -1,13 +1,17 @@
 
 
-export default function Row ({ row, i, arrayLength, setCurrentBoardPiece, pieceType }) {
+export default function Row ({ row, i, arrayLength, setCurrentBoardPiece, pieceType, pieceColor }) {
 		
 	function chooseStyle(number, key, arrLength) {
 		if (key < ((arrLength / 2) / 2) && number === 1) {
-			return 'box black red'
+			if (pieceColor === 'default') {
+				return 'box black red'
+			}
 		}
 		if (key <= 1 && number === 0) {
-			return 'box white blackPiece';
+			if (pieceColor === 'default') {
+				return 'box white blackPiece';
+			}
 		}
 		if (number === 1) return 'box black';
 		if (number === 0) return 'box white';

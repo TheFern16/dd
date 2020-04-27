@@ -18,7 +18,7 @@ function createMatrix(size, count = 0) {
 	return result;
 }
 
-export default function Board ({ size, setCurrentBoardPiece, pieceType }) {
+export default function Board ({ size, setCurrentBoardPiece, pieceType, pieceColor }) {
 	const matrix = [...createMatrix(size)];
 
 	return (
@@ -33,6 +33,7 @@ export default function Board ({ size, setCurrentBoardPiece, pieceType }) {
 								arrayLength={matrix.length} 
 								setCurrentBoardPiece={setCurrentBoardPiece}
 								pieceType={pieceType}
+								pieceColor={pieceColor}
 							/>
 						</div>
 					)

@@ -6,6 +6,7 @@ import Board from '../components/board';
 export default function Index() {
   var [boardSize, setBoardSize] = useState(8);
   var [pieceType, setPieceType] = useState('default');
+  var [pieceColor, setPieceColor] = useState('default');
 
   function handleChange(event) {
     return setBoardSize(JSON.parse(event.target.value));
@@ -38,6 +39,7 @@ export default function Index() {
       <Board 
         size={boardSize} 
         pieceType={pieceType}
+        pieceColor={pieceColor}
       />
     </div>
   )
